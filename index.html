@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiamma & Ezequiel | ¡Nos Casamos!</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Te invitamos a compartir con nosotros este gran día. Consulta los detalles del evento, cronograma, ubicación y confirma tu asistencia aquí.">
+    <meta name="keywords" content="casamiento, invitacion, boda, Fiamma y Ezequiel, RSVP, cronograma">
+    <meta name="author" content="Fiamma & Ezequiel">
+    
+    <!-- Open Graph for Social Sharing / WhatsApp Link Preview -->
+    <meta property="og:title" content="Fiamma & Ezequiel | ¡Nos Casamos!">
+    <meta property="og:description" content="Acompáñanos a celebrar nuestra unión el 10 de Octubre de 2027. Consulta detalles y confirma tu asistencia.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/wedding_background.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,300;0,400;0,600;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css?v=1.0.1">
+</head>
+<body>
+
+    <!-- Floating Audio Control -->
+    <div class="audio-control" id="audioControl" title="Reproducir música de fondo">
+        <div class="audio-pulse"></div>
+        <button class="audio-btn" id="audioBtn">
+            <i class="fas fa-play" id="audioIcon"></i>
+        </button>
+        <span class="audio-text">Escuchar música</span>
+    </div>
+    
+    <!-- Background Audio Element -->
+    <!-- The user can replace the src with a romantic melody, e.g., a piano cover -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
+            <span class="hero-intro">¡Nos Casamos!</span>
+            <h1 class="hero-names">Fiamma & Ezequiel</h1>
+            <p class="hero-quote">"Hoy comienza nuestra historia de amor para siempre."</p>
+            
+            <!-- GUEST WELCOME GREETING -->
+            <div class="guest-welcome-badge hidden" id="guestBadge">
+                <i class="far fa-envelope-open"></i>&nbsp; Invitación especial para: <strong id="guestName"></strong>
+            </div>
+            
+            <!-- Countdown Container -->
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hs</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Min</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seg</span>
+                </div>
+            </div>
+            
+            <a href="#rsvp" class="btn btn-primary btn-scroll-to">Confirmar Asistencia</a>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#historia"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </header>
+
+    <!-- STORY SECTION -->
+    <section class="section story-section" id="historia">
+        <div class="container container-narrow reveal">
+            <div class="ornament-divider">
+                <i class="fas fa-heart-pulse"></i>
+            </div>
+            <h2>Nuestra Unión</h2>
+            <p class="story-text">
+                Hay momentos en la vida que son únicos e inolvidables. Compartir nuestra felicidad con las personas que más queremos es el regalo más hermoso que podemos tener. Queremos invitarte a celebrar el día en que uniremos nuestras vidas para siempre.
+            </p>
+            <div class="wedding-date-highlight">
+                <div class="date-part day">DOMINGO</div>
+                <div class="date-number">10</div>
+                <div class="date-part month-year">OCTUBRE · 2027</div>
+                <div class="date-part time">16:00 HS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE SECTION (CRONOGRAMA) -->
+    <section class="section timeline-section" id="cronograma">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="subtitle">El plan para un día perfecto</span>
+                <h2>Cronograma del Día</h2>
+            </div>
+            
+            <div class="timeline">
+                <!-- Timeline item 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time-tag">16:00 hs</span>
+                        <h3>Ceremonia</h3>
+                        <p>El momento más emotivo. Nos daremos el "sí, quiero" y daremos inicio a nuestra historia formal ante todos nuestros seres queridos.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline item 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time-tag">17:00 hs</span>
+                        <h3>Recepción & Cóctel</h3>
+                        <p>Brindemos juntos por el nuevo camino. Momento de reencuentros, fotos iniciales y deliciosos bocados para empezar la celebración.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline item 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time-tag">19:00 hs</span>
+                        <h3>Cena</h3>
+                        <p>Pasamos al salón principal para disfrutar del menú principal preparado especialmente para esta ocasión. ¡Que disfruten de la cena!</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline item 4 -->
+                <div class="timeline-item right">
+                    <div class="timeline-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time-tag">21:00 hs</span>
+                        <h3>Fiesta & Baile</h3>
+                        <p>Se abre oficialmente la pista. La música no para y queremos ver a todos bailando y festejando hasta que los pies no den más.</p>
+                    </div>
+                </div>
+                
+                <!-- Timeline item 5 -->
+                <div class="timeline-item left">
+                    <div class="timeline-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="time-tag">02:00 hs</span>
+                        <h3>Fin de la Fiesta</h3>
+                        <p>Nos despedimos con el corazón lleno y recuerdos inolvidables de una noche mágica compartida con todos ustedes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILS & LOCATION SECTION (CÓMO LLEGAR) -->
+    <section class="section location-section" id="ubicacion">
+        <div class="container reveal">
+            <div class="section-header">
+                <span class="subtitle">¿Dónde nos encontramos?</span>
+                <h2>Ubicación y Detalles</h2>
+            </div>
+            
+            <div class="location-grid">
+                <!-- Card Ceremonia & Fiesta -->
+                <div class="location-card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-location-dot"></i>
+                    </div>
+                    <h3>El Lugar de Encuentro</h3>
+                    <p class="location-name">Nuestra Casa</p>
+                    <p class="location-address">Córdoba, Argentina</p>
+                    <p class="location-details">Tanto la ceremonia como la gran fiesta de celebración se realizarán en el mismo lugar para tu mayor comodidad.</p>
+                    
+                    <div class="map-placeholder">
+                        <i class="fas fa-house-chimney-window map-home-icon"></i>
+                        <span class="map-label">Ceremonia y Fiesta en Casa</span>
+                    </div>
+
+                    <div class="location-actions">
+                        <a href="https://maps.google.com/?q=-31.4201,-64.1888" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fab fa-google"></i> Google Maps
+                        </a>
+                        <a href="https://waze.com/ul?ll=-31.4201,-64.1888&navigate=yes" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fab fa-waze"></i> Waze
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Código de Vestimenta -->
+                <div class="location-card dress-code-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shirt"></i>
+                    </div>
+                    <h3>Código de Vestimenta</h3>
+                    <p class="dress-code-title">Elegante Casual</p>
+                    <p class="dress-code-details">
+                        Queremos que te sientas elegante pero súper cómodo/a para poder disfrutar de la tarde al aire libre y bailar toda la noche. ¡Trae calzado adecuado para césped y baile!
+                    </p>
+                    <div class="dress-code-visual">
+                        <div class="dress-icon"><i class="fas fa-person-dress"></i> Vestido / Enterito</div>
+                        <div class="dress-icon"><i class="fas fa-person-cane"></i> Saco / Camisa (sin corbata requerida)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GIFTS SECTION (REGALOS) -->
+    <section class="section gifts-section" id="regalos">
+        <div class="container container-narrow reveal">
+            <div class="section-header">
+                <span class="subtitle">Mesa de Regalos</span>
+                <h2>Un detalle especial</h2>
+            </div>
+            <p class="gifts-intro-text">
+                Tu presencia es nuestro mejor obsequio. Pero si de todas formas deseas ayudarnos a comenzar esta nueva etapa o colaborar con nuestra luna de miel, ponemos a disposición nuestra cuenta bancaria.
+            </p>
+            
+            <div class="bank-card">
+                <div class="bank-card-header">
+                    <i class="fas fa-piggy-bank"></i>
+                    <h3>Datos Bancarios</h3>
+                </div>
+                <div class="bank-info-body">
+                    <div class="bank-row">
+                        <span class="bank-label">Titular:</span>
+                        <span class="bank-value">Fiamma y Ezequiel</span>
+                    </div>
+                    <div class="bank-row">
+                        <span class="bank-label">Banco:</span>
+                        <span class="bank-value">Banco Galicia (Ejemplo)</span>
+                    </div>
+                    <div class="bank-row">
+                        <span class="bank-label">CBU:</span>
+                        <span class="bank-value" id="cbuText">0070012345678901234567</span>
+                    </div>
+                    <div class="bank-row">
+                        <span class="bank-label">Alias:</span>
+                        <span class="bank-value-container">
+                            <strong class="bank-value" id="aliasText">Alias.deposite.aqui</strong>
+                        </span>
+                    </div>
+                </div>
+                <div class="bank-card-footer">
+                    <button class="btn btn-primary btn-copy" id="copyAliasBtn">
+                        <i class="far fa-copy" id="copyIcon"></i> <span id="copyBtnText">Copiar Alias</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP SECTION (CONFIRMACIÓN) -->
+    <section class="section rsvp-section" id="rsvp">
+        <div class="container container-narrow reveal">
+            <div class="section-header">
+                <span class="subtitle">¿Nos acompañas?</span>
+                <h2>Confirmación de Asistencia</h2>
+            </div>
+            <p class="rsvp-intro">
+                Por favor, confírmanos tu asistencia antes del <strong>10 de Septiembre de 2027</strong> para poder organizar los detalles del catering y del salón a la perfección.
+            </p>
+            
+            <form class="rsvp-form" id="rsvpForm">
+                <div class="form-group">
+                    <label for="fullName"><i class="fas fa-user"></i> Nombre Completo</label>
+                    <input type="text" id="fullName" placeholder="Ingresa tu nombre y apellido" required>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-circle-question"></i> ¿Asistirás al casamiento?</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="si" checked>
+                            <span class="radio-custom"></span>
+                            <span>¡Sí, confirmo asistencia! 🎉</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="attendance" value="no">
+                            <span class="radio-custom"></span>
+                            <span>Lamentablemente no puedo ir 😔</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group" id="menuGroup">
+                    <label for="menuSelection"><i class="fas fa-plate-wheat"></i> Restricciones Alimentarias / Menú Especial</label>
+                    <select id="menuSelection">
+                        <option value="estandar">Menú Tradicional (Estándar)</option>
+                        <option value="vegetariano">Menú Vegetariano</option>
+                        <option value="vegano">Menú Vegano</option>
+                        <option value="celiaco">Menú Celíaco (Sin TACC)</option>
+                        <option value="otro">Otro (Especificar a continuación)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group hidden" id="menuDetailsGroup">
+                    <label for="menuDetails">Detalla tus restricciones alimentarias</label>
+                    <input type="text" id="menuDetails" placeholder="Ej: Alergia al maní, intolerancia a la lactosa, etc.">
+                </div>
+
+                <div class="form-group">
+                    <label for="playlistSong"><i class="fas fa-compact-disc"></i> Sugerir una canción para la pista</label>
+                    <input type="text" id="playlistSong" placeholder="Canción y artista (Ej: La Bifurcada - Memphis La Blusera)">
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalNotes"><i class="far fa-comment-dots"></i> Mensaje extra para los novios (Opcional)</label>
+                    <textarea id="additionalNotes" rows="3" placeholder="Si vienes con acompañante o quieres dejarnos un lindo mensaje..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-submit">
+                    <i class="fab fa-whatsapp"></i> Confirmar Asistencia por WhatsApp
+                </button>
+            </form>
+            
+            <div class="rsvp-success-message hidden" id="rsvpSuccess">
+                <i class="fas fa-circle-check success-icon"></i>
+                <h3>¡Todo listo!</h3>
+                <p>Estás siendo redirigido a WhatsApp para enviar tu confirmación. Si no se abre automáticamente, haz click en el botón de abajo.</p>
+                <a href="#" id="manualWaLink" target="_blank" class="btn btn-secondary">Abrir WhatsApp Manualmente</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-ornament">✿</div>
+        <p class="footer-names">Fiamma & Ezequiel</p>
+        <p class="footer-date">10 . 10 . 2027</p>
+        <p class="footer-credits">&copy; 2027 Creado con amor para su casamiento.</p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js?v=1.0.1"></script>
+</body>
+</html>
